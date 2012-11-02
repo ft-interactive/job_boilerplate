@@ -1,0 +1,85 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/i/378 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title></title>
+  <meta name="description" content="">
+
+  <!-- Mobile viewport optimized: h5bp.com/viewport -->
+  <meta name="viewport" content="width=device-width">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+  
+  <!-- We'll assume FT.com hasn't boilerplate -->
+  
+  <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+
+  <script src="//interactive.ftdata.co.uk/js/yepnope-1.5.3.min.js"></script>
+</head>
+<body>
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+  <header></header>
+  <div role="main">
+      <div id="FTi">
+		<!-- custom interactive start -->
+        <script language="javascript">
+          var FT = FT || {};FT.Interactive = FT.Interactive || {};
+          
+          (function () {
+            yepnope([
+              { test: !window.jquery, yep: "//interactive.ftdata.co.uk/js/jquery-1.7.2.min.js" },
+               { test: !window.Highcharts, yep: ["//interactive.ftdata.co.uk/js/highcharts-2.2.5/highcharts.js", "//interactive.ftdata.co.uk/js/themes/ft.interactive.js" ]},
+              { load: ["//interactive.ftdata.co.uk/css/FTi_bp_style.css","//interactive.ftdata.co.uk/css/FTi.css","css/FTi_module_style.css"] },
+              { load: ["js/plugins.js","js/script.js"] }
+            ]);
+          }());
+          
+        </script>
+		<div class="wideWidth">
+		  <div class="title"></div>
+		  <!-- set the height class in the following div -->
+		  <div class="content" id="contentBox">
+			<div class="loader" id="preLoader">
+			  <img src="http://interactive.ftdata.co.uk/imgs/ftloader.png" width="228" height="256" alt="loading...">
+			  <div id="loadText"><p>Loading...<p></div>
+			</div>
+            <!-- active area start -->
+            <div>
+               
+            </div>
+            <!-- active area end -->
+          </div>
+		  <!-- FTi sandbox end -->
+		 <div class="footer">
+			<div id="source"></div>
+			<div><img src="http://interactive.ftdata.co.uk/imgs/ftlogo.png" alt="ft.com"></div>
+			<div id="credits"></div>
+		</div>
+		<div id="sourcesCredits"></div>
+        <!-- custom interactive end --> 
+	  </div>
+  </div>
+  <footer></footer>
+
+  <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
+       mathiasbynens.be/notes/async-analytics-snippet -->
+  <script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+</body>
+</html>
