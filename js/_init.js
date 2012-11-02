@@ -57,12 +57,15 @@ FT.Interactive = FT.Interactive || {
 		}
 		
 	},
+	 yql: function(url){
+			return 'http://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent("select * from xml where url='" + url + "'") +'&format=json&diagnostics=true&callback=?';
+		},
 	/*
 	!this function needs to be developed!
 	as it will translate the the uuid number placed in the page to the server folder
 	*/
 	convertUuid: function(p){
-		var url = 'http://interactive.ftdata.co.uk/boilerplate-2.0.0/index.html';
+		var url = 'http://interactive.ftdata.co.uk/features/2012-10-17_boilerplateTest/';
 		return url;
 	},
 	/*
@@ -655,7 +658,7 @@ var docElement            = doc.documentElement,
 	
 	FT.Interactive.setStyle();
 	yepnope([
-		{load: '//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js',
+		{load: 'http://code.jquery.com/jquery.min.js',
  	    	callback: function (url, result, key) {
  	        if (!window.jQuery) yepnope('js/jquery.min.js');
  	    },
@@ -664,7 +667,13 @@ var docElement            = doc.documentElement,
 			this is where we should be detecting which folder we are pointing to
 			hopefully derived from the uuid which is in the id of the containing div
 			*/
- 	       yepnope('http://interactive.ftdata.co.uk/boilerplate-2.0.0/js/script.js')
+			var _a = '';
+			if(window.location.host != 'interactive.ftdata.co.uk'){
+				_a = FT.Interactive.convertUuid('abcde-012345-098765-fedcba');
+			} else {
+				_a ='';
+			}
+ 	       yepnope(_a + 'js/script.js')
  	    }}
 	]);
 }());

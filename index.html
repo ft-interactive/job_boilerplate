@@ -27,19 +27,21 @@
 <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
 
 <link rel="stylesheet" href="" title="" type="text/css" media="screen" charset="utf-8">
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<!-- <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script> -->
+<!-- <script type="text/javascript" src="http://interactive.ftdata.co.uk/js/yepnope-1.5.3.min.js"></script> -->
 </head>
 <body>
 <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
        chromium.org/developers/how-tos/chrome-frame-getting-started --> 
 <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 <header></header>
-<div role="main">
+<div role="main" id="igabcde-012345-098765-fedcba">
 <div id="FTi"> 
     <!-- custom interactive start -->
-    <div class="wideWidth">
+    <div class="narrowWidth">
         <div class="title"></div>
         <!-- set the height class in the following div -->
+        
         <div class="content" id="contentBox">
             <div class="loader" id="preLoader"> <img src="http://interactive.ftdata.co.uk/imgs/ftloader.png" width="228" height="256" alt="loading...">
                 <div id="loadText">
@@ -48,7 +50,31 @@
                 </div>
             </div>
             <!-- active area start -->
-            <div> </div>
+            
+            <div id='chartInstruction' class='instruction'></div>
+            <div id="controlStrip">
+                <div id="resetBtn">Zoom out</div>
+                <div id="rb">
+                    <table id="radioButtons" class="radioTable">
+                    </table>
+                </div>
+            </div>
+            
+            <!-- start of no svg error -->
+            
+            <div id="errorMessageHolder">
+                <div id="errorMessage"></div>
+                <div id="errorBground"></div>
+            </div>
+            
+            <!-- end of no svg error -->
+            
+            <div id="errorImage"></div>
+            <div id="keyHolder"></div>
+            <div id="regionData" class="toolTip"></div>
+            <div id="svgloadRegions"></div>
+            <div id="svgload"></div>
+            
             <!-- active area end --> 
         </div>
         <!-- FTi sandbox end -->
@@ -60,70 +86,8 @@
         <div id="sourcesCredits"></div>
         <!-- custom interactive end --> 
     </div>
-    <script>
-		var FT = FT || {};
-		FT.Interactive = FT.Interactive || {
-		apps:[],
-		setRef: function(uuid){
-			var eList = document.getElementsByTagName('div');
-			for (var i = 0; i < eList.length; i++) {
-				if (eList[i].getAttribute('id') === 'FTi') {
-					FT.Interactive.apps.push({
-						self: eList[i],
-						uuid: uuid
-					})
-					
-					return (FT.Interactive.apps.length - 1);
-				}
-			}
-		},
-		/*
-			checks for presence of base css file if not present add
-		*/
-		setStyle: function(){
-			var cssList = document.getElementsByTagName('link');
-			var flag = false;
-			for (var i = 0; i < cssList.length; i++) {
-				if (cssList[i].getAttribute('rel') === "stylesheet" && cssList[i].getAttribute('type') === "text/css" && cssList[i].getAttribute('href') === 'http://interactive.ftdata.co.uk/css/FTi_bp_style.css') {
-					flag = true;
-					break;
-				}
-			}
-			if (!flag) {
-				var cLnk = document.createElement("link");
-				cLnk.setAttribute("rel", "stylesheet");
-				cLnk.setAttribute("type", "text/css");
-				cLnk.setAttribute("href", 'http://interactive.ftdata.co.uk/css/FT-base.css');
-				document.getElementsByTagName("head")[0].appendChild(cLnk);
-			}
-		},
-		/*
-			buildSpace gets called with the conf.dimensions and the id of the interactive parameter
-		*/
-		buildSpace: function(dimensions, FTi){
-			console.log('func:buildSpace' + FTi);
-			$(FTi.self).html('<div id="FTi"><div></div></div>');
-			switch(dimensions[0]){
-				case 886:
-					$(FTi.self).find('#FTi.div div').addClass('#FTi .wideWidth');
-					$(FTi.self).find('#FTi.div div').css('height', dimensions[1]+'px');
-					break;
-				case 566:
-					$(FTi.self).find('#FTi.div div').addClass('#FTi .narrowWidth');
-					$(FTi.self).find('#FTi.div div').css('height', dimensions[1+'px']);
-					break;
-				default:
-				$(FTi.self).find('#FTi.div div').css({'width': dimensions[0]+'px','height': dimensions[1]+'px'});
-					break;
-			}
-		},
-		/*
-			error messsage output with a text string output
-		*/
-		failOutput: function(msg){}
-		};
-	</script> 
-    <script type="text/javascript" src="js/script.js"></script> 
+    <script type="text/javascript" src="js/_init.js"></script> 
+    <!-- <script type="text/javascript" src="js/script.js"></script> -->
 </div>
 <footer></footer>
 </body>
