@@ -14,7 +14,7 @@
 <!-- Use the .htaccess and remove these lines to avoid edge case issues.
        More info: h5bp.com/i/378 -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title></title>
+<title>Financial Times Interactive Article</title>
 <meta name="description" content="">
 
 <!-- Mobile viewport optimized: h5bp.com/viewport -->
@@ -25,21 +25,69 @@
 <!-- We'll assume FT.com hasn't boilerplate -->
 
 <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+<style>
 
-<link rel="stylesheet" href="" title="" type="text/css" media="screen" charset="utf-8">
-<!-- <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script> -->
-<!-- <script type="text/javascript" src="http://interactive.ftdata.co.uk/js/yepnope-1.5.3.min.js"></script> -->
+body {
+    background-color: #FFF1E0;
+    font-family: Arial,Helvetica,sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+#FTi{}
+#FTi div.wideWidth { width:886px;}
+#FTi div.narrowWidth { width:566px;}
+
+#FTi .title {
+	padding:5px 0px 0px 10px;
+	background-color: #e9decf;
+	height:40px;
+	border-bottom: 1px solid #a7a59b;
+}
+#FTi .title span {
+	font-size:24px;
+	color: #333;
+}
+
+#FTi .content{
+	position:relative;
+	top:0px;
+	left:0px;
+	padding-top: 10px;
+	padding-left: 10px;
+	border-right: 1px solid #e9decf;
+	border-left: 1px solid #e9decf;
+	overflow:hidden;
+}
+#FTi .footer {
+	height: 22px;
+	left: 0px;
+	background-color: #fff1e0;
+	padding: 8px 0px 0px 10px;
+	border-top: 1px solid #d9cdbe;
+	border-right: 1px solid #e9decf;
+	border-bottom: 8px solid #e9decf;
+	border-left: 1px solid #e9decf;
+}
+#FTi .footer #source{float:left;}
+#FTi .footer div img {float:right;}
+</style>
+
 </head>
 <body>
 <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
        chromium.org/developers/how-tos/chrome-frame-getting-started --> 
-<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+<!--[if lt IE 7]>
+	<p>Sorry, your internet browser does not support SVGs, the graphic technology used in this interactive graphic. Most likely you are using an older version of Internet Explorer. </p>
+    <p>Please either upgrade to Internet Explorer 9, or view this interactive graphic in another browser such as <a href="http://www.mozilla.org/en-US/firefox/new/" target="_blank">Mozilla Firefox</a>, <a href="https://www.google.com/intl/en/chrome/browser/" target="_blank">Google Chrome</a>, <a href="http://www.apple.com/safari/" target="_blank">Safari</a> or <a href="http://www.opera.com/" target="_blank">Opera</a>. </p>
+	<p>The image shown below this message is a  sample preview of the full graphic.</p>
+<![endif]-->
 <header></header>
-<div role="main" id="igabcde-012345-098765-fedcba">
+<div id="igabcde-012345-098765-fedcba">
 <div id="FTi"> 
     <!-- custom interactive start -->
     <div class="narrowWidth">
-        <div class="title"></div>
+        <div class="title"><span>Financial Times Interactive Article</span></div>
         <!-- set the height class in the following div -->
         
         <div class="content" id="contentBox">
@@ -50,30 +98,6 @@
                 </div>
             </div>
             <!-- active area start -->
-            
-            <div id='chartInstruction' class='instruction'></div>
-            <div id="controlStrip">
-                <div id="resetBtn">Zoom out</div>
-                <div id="rb">
-                    <table id="radioButtons" class="radioTable">
-                    </table>
-                </div>
-            </div>
-            
-            <!-- start of no svg error -->
-            
-            <div id="errorMessageHolder">
-                <div id="errorMessage"></div>
-                <div id="errorBground"></div>
-            </div>
-            
-            <!-- end of no svg error -->
-            
-            <div id="errorImage"></div>
-            <div id="keyHolder"></div>
-            <div id="regionData" class="toolTip"></div>
-            <div id="svgloadRegions"></div>
-            <div id="svgload"></div>
             
             <!-- active area end --> 
         </div>
@@ -86,9 +110,22 @@
         <div id="sourcesCredits"></div>
         <!-- custom interactive end --> 
     </div>
-    <script type="text/javascript" src="js/_init.js"></script> 
-    <!-- <script type="text/javascript" src="js/script.js"></script> -->
+    <!-- <script type="text/javascript" src="js/_init.js"></script> -->
 </div>
+ 
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-XXXXX-X']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 <footer></footer>
 </body>
 </html>
