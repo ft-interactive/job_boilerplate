@@ -6,6 +6,7 @@
     var _selfRef = FT.Interactive.setRef(conf.uuid);
 	var FTi = FT.Interactive.apps[_selfRef];
 	FTi.conf = conf;
+	yepnope(FTi.conf.library);
 	var dPointer = 0;
 	FTi.dataset;
 	if(FTi.conf.dataSources.length == 0){
@@ -46,9 +47,11 @@
 	/*
 		the library list will have to match the yepnope loader parameters
 	*/
-	library:{
-		
-		},
+	library: [
+			{load: ['http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js']},
+			{load: ['js/jquery.svg.min.js','js/jquery.svgdom.min.js', 'js/jquery.svganim.min.js']},
+			{load: ['js/scale.js']}
+		] ,
 	dataSources:['http://interactive.ftdata.co.uk/data/yql/?_cf=194&id=273'],
 	/*width x height */
 	dimensions:[566,480],

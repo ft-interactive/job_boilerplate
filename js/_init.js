@@ -44,11 +44,11 @@ FT.Interactive = FT.Interactive || {
 		
 		switch(FTi.conf.dimensions[0]){
 			case 886:
-				$(FTi.self).find('div#FTi > div').addClass('.wideWidth');
+				$(FTi.self).find('div#FTi > div').addClass('#FTi .wideWidth');
 				$(FTi.self).find('div#FTi > div').css('height', FTi.conf.dimensions[1]+'px');
 				break;
 			case 566:
-				$(FTi.self).find('div#FTi > div').addClass('.narrowWidth');
+				$(FTi.self).find('div#FTi > div').addClass('#FTi .narrowWidth');
 				$(FTi.self).find('div#FTi > div').css('height', FTi.conf.dimensions[1]+'px');
 				break;
 			default:
