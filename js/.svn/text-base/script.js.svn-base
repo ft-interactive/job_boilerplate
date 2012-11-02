@@ -1,0 +1,45 @@
+/* Author: P.Feeney (Fighne)
+
+*/
+(function (conf) {
+
+    var _selfRef = FT.Interactive.setRef(conf.uuid);
+	var FTi = FT.Interactive.apps[_selfRef];
+	FTi.conf = conf;
+	var dPointer = 0;
+	FTi.dataset;
+    function setData(ds) {
+		FTi.conf.dataSources.length === 1 ? FTi.dataset = ds.query.results.dataset : FTi.dataset.push(ds.query.results.dataset);
+		dPointer++;
+		FTi.conf.dataSources.length > 1 ? getData(dPointer) : init();
+	}
+    function getData(dPointer) {
+		$.getJSON(FTi.conf.dataSources[dPointer] + '&callback=?').success(setData);
+	}
+	getData(dPointer);
+    function init(){
+		/*
+		need a test here which will check for the location for when running on the interactive development box
+		*/
+		FT.Interactive.buildSpace(FTi.conf.dimensions, FTi);
+	};
+}({
+	uuid:'abcd-0123-efgh-5678',
+	/*
+		the library list will have to match the yepnope loader parameters
+	*/
+	library:{
+		
+		},
+	dataSources:['http://interactive.ftdata.co.uk/data/yql/?_cf=194&id=273'],
+	/*width x height */
+	dimensions:[],
+	/*
+		requirements of the browser environment to be able to display this interactive
+		examples; svg, js18, 
+	*/
+	capability:[],
+	developing: true 
+	}))
+
+

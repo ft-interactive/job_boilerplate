@@ -4,82 +4,127 @@
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
 <head>
-  <meta charset="utf-8">
+<meta charset="utf-8">
 
-  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+<!-- Use the .htaccess and remove these lines to avoid edge case issues.
        More info: h5bp.com/i/378 -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title></title>
+<meta name="description" content="">
 
-  <title></title>
-  <meta name="description" content="">
+<!-- Mobile viewport optimized: h5bp.com/viewport -->
+<meta name="viewport" content="width=device-width">
 
-  <!-- Mobile viewport optimized: h5bp.com/viewport -->
-  <meta name="viewport" content="width=device-width">
+<!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
 
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
-  
-  <!-- We'll assume FT.com hasn't boilerplate -->
-  
-  <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+<!-- We'll assume FT.com hasn't boilerplate -->
 
-  <script src="//interactive.ftdata.co.uk/js/yepnope-1.5.3.min.js"></script>
+<!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+
+<link rel="stylesheet" href="" title="" type="text/css" media="screen" charset="utf-8">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 </head>
 <body>
-  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
-       chromium.org/developers/how-tos/chrome-frame-getting-started -->
-  <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-  <header></header>
-  <div role="main">
-      <div id="FTi">
-		<!-- custom interactive start -->
-        <script language="javascript">
-          var FT = FT || {};FT.Interactive = FT.Interactive || {};
-          
-          (function () {
-            yepnope([
-              { test: !window.jquery, yep: "//interactive.ftdata.co.uk/js/jquery-1.7.2.min.js" },
-               { test: !window.Highcharts, yep: ["//interactive.ftdata.co.uk/js/highcharts-2.2.5/highcharts.js", "//interactive.ftdata.co.uk/js/themes/ft.interactive.js" ]},
-              { load: ["//interactive.ftdata.co.uk/css/FTi_bp_style.css","//interactive.ftdata.co.uk/css/FTi.css","css/FTi_module_style.css"] },
-              { load: ["js/plugins.js","js/script.js"] }
-            ]);
-          }());
-          
-        </script>
-		<div class="wideWidth">
-		  <div class="title"></div>
-		  <!-- set the height class in the following div -->
-		  <div class="content" id="contentBox">
-			<div class="loader" id="preLoader">
-			  <img src="http://interactive.ftdata.co.uk/imgs/ftloader.png" width="228" height="256" alt="loading...">
-			  <div id="loadText"><p>Loading...<p></div>
-			</div>
-            <!-- active area start -->
-            <div>
-               
+<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started --> 
+<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+<header></header>
+<div role="main">
+<div id="FTi"> 
+    <!-- custom interactive start -->
+    <div class="wideWidth">
+        <div class="title"></div>
+        <!-- set the height class in the following div -->
+        <div class="content" id="contentBox">
+            <div class="loader" id="preLoader"> <img src="http://interactive.ftdata.co.uk/imgs/ftloader.png" width="228" height="256" alt="loading...">
+                <div id="loadText">
+                    <p>Loading...
+                    <p> 
+                </div>
             </div>
-            <!-- active area end -->
-          </div>
-		  <!-- FTi sandbox end -->
-		 <div class="footer">
-			<div id="source"></div>
-			<div><img src="http://interactive.ftdata.co.uk/imgs/ftlogo.png" alt="ft.com"></div>
-			<div id="credits"></div>
-		</div>
-		<div id="sourcesCredits"></div>
+            <!-- active area start -->
+            <div> </div>
+            <!-- active area end --> 
+        </div>
+        <!-- FTi sandbox end -->
+        <div class="footer">
+            <div id="source"></div>
+            <div><img src="http://interactive.ftdata.co.uk/imgs/ftlogo.png" alt="ft.com"></div>
+            <div id="credits"></div>
+        </div>
+        <div id="sourcesCredits"></div>
         <!-- custom interactive end --> 
-	  </div>
-  </div>
-  <footer></footer>
-
-  <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
-       mathiasbynens.be/notes/async-analytics-snippet -->
-  <script>
-    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g,s)}(document,'script'));
-  </script>
+    </div>
+    <script>
+		var FT = FT || {};
+		FT.Interactive = FT.Interactive || {
+		apps:[],
+		setRef: function(uuid){
+			var eList = document.getElementsByTagName('div');
+			for (var i = 0; i < eList.length; i++) {
+				if (eList[i].getAttribute('id') === 'FTi') {
+					FT.Interactive.apps.push({
+						self: eList[i],
+						uuid: uuid
+					})
+					
+					return (FT.Interactive.apps.length - 1);
+				}
+			}
+		},
+		/*
+			checks for presence of base css file if not present add
+		*/
+		setStyle: function(){
+			var cssList = document.getElementsByTagName('link');
+			var flag = false;
+			for (var i = 0; i < cssList.length; i++) {
+				if (cssList[i].getAttribute('rel') === "stylesheet" && cssList[i].getAttribute('type') === "text/css" && cssList[i].getAttribute('href') === 'http://interactive.ftdata.co.uk/css/FTi_bp_style.css') {
+					flag = true;
+					break;
+				}
+			}
+			if (!flag) {
+				var cLnk = document.createElement("link");
+				cLnk.setAttribute("rel", "stylesheet");
+				cLnk.setAttribute("type", "text/css");
+				cLnk.setAttribute("href", 'http://interactive.ftdata.co.uk/css/FT-base.css');
+				document.getElementsByTagName("head")[0].appendChild(cLnk);
+			}
+		},
+		/*
+			buildSpace gets called with the conf.dimensions and the id of the interactive parameter
+		*/
+		buildSpace: function(dimensions, FTi){
+			console.log('func:buildSpace' + FTi);
+			$(FTi.self).html('<div id="FTi"><div></div></div>');
+			switch(dimensions[0]){
+				case 886:
+					$(FTi.self).find('#FTi.div div').addClass('#FTi .wideWidth');
+					$(FTi.self).find('#FTi.div div').css('height', dimensions[1]+'px');
+					break;
+				case 566:
+					$(FTi.self).find('#FTi.div div').addClass('#FTi .narrowWidth');
+					$(FTi.self).find('#FTi.div div').css('height', dimensions[1+'px']);
+					break;
+				default:
+				$(FTi.self).find('#FTi.div div').css({'width': dimensions[0]+'px','height': dimensions[1]+'px'});
+					break;
+			}
+		},
+		/*
+			error messsage output with a text string output
+		*/
+		failOutput: function(msg){}
+		};
+	</script> 
+    <script type="text/javascript" src="js/script.js"></script> 
+</div>
+<footer></footer>
 </body>
 </html>
