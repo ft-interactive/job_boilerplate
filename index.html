@@ -114,13 +114,7 @@ FTi .loaderH {
 
 </head>
 <body>
-<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
-       chromium.org/developers/how-tos/chrome-frame-getting-started --> 
-<!--[if lt IE 8]>
-	<p>Sorry, your internet browser does the graphic technology used in this interactive graphic. Most likely you are using an older version of Internet Explorer. </p>
-    <p>Please either upgrade to Internet Explorer 9, or view this interactive graphic in another browser such as <a href="http://www.mozilla.org/en-US/firefox/new/" target="_blank">Mozilla Firefox</a>, <a href="https://www.google.com/intl/en/chrome/browser/" target="_blank">Google Chrome</a>, <a href="http://www.apple.com/safari/" target="_blank">Safari</a> or <a href="http://www.opera.com/" target="_blank">Opera</a>. </p>
-	<p>The image shown below this message is a  sample preview of the full graphic.</p>
-<![endif]-->
+
 <header></header>
 <div id="igabcde-012345-098765-fedcba">
 <div id="FTi"> 
@@ -129,7 +123,14 @@ FTi .loaderH {
         <div class="title"><span>Financial Times Interactive Article</span></div>
         <!-- set the height class in the following div -->
         <div class="content">
-           
+           <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started --> 
+<!--[if lt IE 8]>
+	<p>Sorry, your internet browser does the graphic technology used in this interactive graphic. Most likely you are using an older version of Internet Explorer. </p>
+    <p>Please either upgrade to Internet Explorer 9, or view this interactive graphic in another browser such as <a href="http://www.mozilla.org/en-US/firefox/new/" target="_blank">Mozilla Firefox</a>, <a href="https://www.google.com/intl/en/chrome/browser/" target="_blank">Google Chrome</a>, <a href="http://www.apple.com/safari/" target="_blank">Safari</a> or <a href="http://www.opera.com/" target="_blank">Opera</a>. </p>
+	<p>The image shown below this message is a  sample preview of the full graphic.</p>
+<![endif]-->
+<!--[if gt IE 7]>
             <div class="loaderH" id="preLoader">
                 <div class="loaderC">
                     <img src="http://interactive.ftdata.co.uk/imgs/ftloader.png" width="228" height="256" alt="loading...">
@@ -140,7 +141,8 @@ FTi .loaderH {
             </div>
             <!-- active area start -->
             
-            <!-- active area end --> 
+            <!-- active area end -->
+<![endif]-->
         </div>
         <!-- FTi sandbox end -->
         <div class="footer">
