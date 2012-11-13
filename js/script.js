@@ -10,6 +10,15 @@
 		//$("#source").html(f.sourceLink);
 	};
 	
+	/*
+		comment out tests not required
+		alternative img must be supplied
+	*/
+	FT.Interactive.browserTest('SVG', 'http://im.ft-static.com/m/img/masthead_main.jpg');
+	//FT.Interactive.browserTest('CANVAS');
+	//FT.Interactive.browserTest('CSS3');
+	
+
 	FT.Interactive.setStyle();
     var _selfRef = FT.Interactive.setRef(conf.uuid);
 	var FTi = FT.Interactive.apps[_selfRef];
