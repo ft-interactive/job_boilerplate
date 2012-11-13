@@ -14,7 +14,7 @@ FT.Interactive = FT.Interactive || {
 	wrDataSet: function(){},
 	browserTest: function (str, url){
 		if(str == 'SVG' && document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Shape", "1.0")){
-			return 
+			return true;
 		} else {
 			$('#FTi #content').html('');
 			$('#FTi #content').html('<p>Sorry, your internet browser does not support SVGs, the graphic technology used in this interactive graphic. Most likely you are using an older version of Internet Explorer. </p>');

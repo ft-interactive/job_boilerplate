@@ -15,7 +15,7 @@
 		alternative img must be supplied
 	*/
 	if(FT.Interactive.browserTest('SVG', 'http://im.ft-static.com/m/img/masthead_main.jpg')){
-		$('#FTi #content').html(' <div class="loaderH" id="preLoader"> <div class="loaderC"> <img src="http://interactive.ftdata.co.uk/imgs/ftloader.png" width="228" height="256" alt="loading..."> <div id="loadText"> <p>Loading...</p> </div> </div> </div> ');
+		$('#FTi .content').html(' <div class="loaderH" id="preLoader"> <div class="loaderC"> <img src="http://interactive.ftdata.co.uk/imgs/ftloader.png" width="228" height="256" alt="loading..."> <div id="loadText"> <p>Loading...</p> </div> </div> </div> ');
 	};
 	//FT.Interactive.browserTest('CANVAS');
 	//FT.Interactive.browserTest('CSS3');
