@@ -21,7 +21,7 @@
 	//FT.Interactive.browserTest('CSS3');
 	
 
-	FT.Interactive.setStyle();
+	//FT.Interactive.setStyle();
     var _selfRef = FT.Interactive.setRef(conf.uuid);
 	var FTi = FT.Interactive.apps[_selfRef];
 	FTi.conf = conf;
