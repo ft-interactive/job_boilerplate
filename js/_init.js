@@ -16,15 +16,15 @@ FT.Interactive = FT.Interactive || {
 	// written assuming jQuery is already loaded and present
 	browserVersion: function(){
 		var r = { browser: '', version: $.browser.version };
-		if($.browser == 'msie'){
+		if($.browser.msie){
 			r.browser = 'msie';
-		} else if ($.browser == 'safari'){ 
+		} else if ($.browser.safari){ 
 			r.browser = 'safari';
-		} else if ($.browser == 'webkit'){
+		} else if ($.browser.webkit){
 			r.browser = 'webkit';
-		} else if ($.browser == 'opera'){
+		} else if ($.browser.opera){
 			r.browser = 'opera';
-		} else if ($.browser == 'mozilla'){
+		} else if ($.browser.mozilla){
 			r.browser = 'mozilla';
 		} else {
 			r.browser = 'unknown';
@@ -33,20 +33,28 @@ FT.Interactive = FT.Interactive || {
 	},
 	
 	isSupported: function(str){
-		var rVal = false;
 		switch (str){
 			case 'SVG':
-				// awaiting comment from Luke
+				return document['implementation'] && document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Shape", "1.0");
 				break;
 			case 'CANVAS':
 				break;
 			case 'CSS3':
 				break;
 			default:
-				rVal = false;
+				return false;
 			break;
 		}
-		return rVal;
 	},
-	
+	browserTest: function(){
+		return this.browserVersion().browser === 'msie' && this.browserVersion().version <= 8? true : false ;
+	},
+	setPreloader: function(bool){
+		bool ? $('#FTi #preLoader').css('display','inline'): $('#FTi #preLoader').css('display','inline');
+	},
+	displayMessage: function(type){
+		
+	}
 }
+
+$('#FTi').delay(2000).fadeIn(500); 

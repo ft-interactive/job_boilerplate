@@ -3,6 +3,17 @@
 */
 (function (conf) {
 	
+	if(!FT.Interactive.browserTest){
+		$('#FTi').fadeIn(100);
+		setPreloader(false);
+		
+	} else {
+		setPreloader(true);
+	}
+	
+	
+	
+	
 	function initGraphic(f){
 		$(".title").html(f.graphic_title);
 		$("#sourcesCredits").html(f.source );
@@ -14,6 +25,7 @@
 		comment out tests not required
 		alternative img must be supplied
 	*/
+	
 	if(FT.Interactive.browserTest('SVG', 'http://im.ft-static.com/m/img/masthead_main.jpg')){
 		$('#FTi .content').html(' <div class="loaderH" id="preLoader"> <div class="loaderC"> <img src="http://interactive.ftdata.co.uk/imgs/ftloader.png" width="228" height="256" alt="loading..."> <div id="loadText"> <p>Loading...</p> </div> </div> </div> ');
 	};
@@ -22,6 +34,7 @@
 	
 
 	//FT.Interactive.setStyle();
+	/*
     var _selfRef = FT.Interactive.setRef(conf.uuid);
 	var FTi = FT.Interactive.apps[_selfRef];
 	FTi.conf = conf;
@@ -37,6 +50,7 @@
 		FTi.dataset = [];
 		getData(dPointer);
 	};
+	*/
 	//getData(dPointer);
 	
     function setData(ds) {

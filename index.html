@@ -10,7 +10,7 @@
 
 <head>
 <meta charset="utf-8">
- 
+
 <!-- Use the .htaccess and remove these lines to avoid edge case issues.
        More info: h5bp.com/i/378 -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -25,96 +25,10 @@
 <!-- We'll assume FT.com hasn't boilerplate -->
 
 <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
-<style>
-body {
-    background-color: #FFF1E0;
-    font-family: Arial,Helvetica,sans-serif;
-    margin: 0px;
-    padding: 0px;
-}
-#FTi{}
-#FTi div.wideWidth { width:886px;}
-#FTi div.narrowWidth { width:566px;}
-#FTi .title {
-	padding:5px 0px 0px 10px;
-	background-color: #e9decf;
-	height:40px;
-	border-bottom: 1px solid #a7a59b;
-}
-#FTi .title span { font-size:24px; color: #333; }
-#FTi .content{
-	position:relative;
-	top:0px;
-	left:0px;
-	padding-top: 10px;
-	padding-left: 10px;
-	border-right: 1px solid #e9decf;
-	border-left: 1px solid #e9decf;
-	overflow:hidden;
-	height:400px
-}
-FTi .loaderH {
-    background-color: transparent;
-    display: block;
-    height: 1px;
-    left: 0;
-    position: absolute;
-    top: 50%;
-    visibility: visible;
-    width: 566px;
-    z-index:50000;
-}
-#FTi .loaderC {
-    height: 290px;
-    left: 50%;
-    margin-left: -114px;
-    position: absolute;
-    top: 20%;
-    visibility: visible;
-    width: 228px;
-    z-index:50000;
-}
-#FTi #sourcesCredits {
-	display:none;
-	position:absolute;
-	left:14px;
-	bottom:39px;
-	background-color:#f6e9d8;
-	z-index: 5000;
-	border-left: 1px solid #a7a59b;	
-	border-right: 1px solid #a7a59b;
-	border-top: 1px solid #a7a59b;	
-	font-family:Arial, Helvetica, sans-serif;
-	font-size:11px;
-	color:#333;	
-	line-height:16px;
-	padding: 10px;
-	margin-right:14px;
-	/*moz-box-shadow: 1px 1px 4px #000;
-	webkit-box-shadow: 1px 1px 4px #000;
-	box-shadow: 1px 1px 4px #000;*/
-}
-#FTi .footer {
-	font-family:Arial, Helvetica, sans-serif;
-	font-size:11px;
-	color: #2e6e9e;
-	height: 22px;
-	left: 0px;
-	background-color: #fff1e0;
-	padding: 8px 0px 0px 10px;
-	border-top: 1px solid #d9cdbe;
-	border-right: 1px solid #e9decf;
-	border-bottom: 8px solid #e9decf;
-	border-left: 1px solid #e9decf;
-}
-#FTi .footer #source{ float:left; text-decoration:none; color: #2e6e9e; cursor:pointer; width:250px; }
-#FTi .footer div img {float:right;}
-#FTi .footer #sourcesCredits a{ text-decoration:none; color: #2e6e9e; }
-</style>
-
+<link rel="stylesheet" type="text/css" href="css/FTi-stage1.css" />
+<link rel="stylesheet" type="text/css" href="css/FTi-stage2.css" />
 </head>
 <body>
-
 <header></header>
 <div id="igabcde-012345-098765-fedcba">
 <div id="FTi"> 
@@ -122,19 +36,18 @@ FTi .loaderH {
     <div class="narrowWidth">
         <div class="title"><span>Financial Times Interactive Article</span></div>
         <!-- set the height class in the following div -->
-        <div class="content">
-           <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
-       chromium.org/developers/how-tos/chrome-frame-getting-started --> 
-<!--[if lt IE 8]>
-	<p>Sorry, your internet browser does the graphic technology used in this interactive graphic. Most likely you are using an older version of Internet Explorer. </p>
-    <p>Please either upgrade to Internet Explorer 9, or view this interactive graphic in another browser such as <a href="http://www.mozilla.org/en-US/firefox/new/" target="_blank">Mozilla Firefox</a>, <a href="https://www.google.com/intl/en/chrome/browser/" target="_blank">Google Chrome</a>, <a href="http://www.apple.com/safari/" target="_blank">Safari</a> or <a href="http://www.opera.com/" target="_blank">Opera</a>. </p>
-	<p>The image shown below this message is a  sample preview of the full graphic.</p>
-<![endif]-->
-
-            <!-- active area start -->
+        <div class="content"> 
             
-            <!-- active area end -->
-
+            <!-- active area start -->
+            <div class="loaderH" id="preLoader">
+                <div class="loaderC"> <img src="http://interactive.ftdata.co.uk/imgs/ftloader.png" width="228" height="256" alt="loading...">
+                    <div id="loadText">
+                        <p>Loading...</p>
+                    </div>
+                </div>
+            </div>
+            <!-- active area end --> 
+            
         </div>
         <!-- FTi sandbox end -->
         <div class="footer">
@@ -145,9 +58,9 @@ FTi .loaderH {
         
         <!-- custom interactive end --> 
     </div>
-    <!-- <script type="text/javascript" src="js/_init.js"></script> -->
+    <!-- <script type="text/javascript" src="js/_init.js"></script> --> 
 </div>
-<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script> 
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -160,8 +73,8 @@ FTi .loaderH {
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
-</script>
-<script type="text/javascript" src="js/_init.js"></script>
+</script> 
+<script type="text/javascript" src="js/_init.js"></script> 
 <script type="text/javascript" src="js/script.js"></script>
 <footer></footer>
 </body>

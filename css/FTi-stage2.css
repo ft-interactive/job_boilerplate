@@ -1,0 +1,104 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	background-color: #FFF1E0;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+#FTi {
+}
+#FTi div.wideWidth {
+	width: 886px;
+}
+#FTi div.narrowWidth {
+	width: 566px;
+}
+#FTi .title {
+	padding: 5px 0px 0px 10px;
+	background-color: #e9decf;
+	height: 40px;
+	border-bottom: 1px solid #a7a59b;
+}
+#FTi .title span {
+	font-size: 24px;
+	color: #333;
+}
+#FTi .content {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	padding-top: 10px;
+	padding-left: 10px;
+	border-right: 1px solid #e9decf;
+	border-left: 1px solid #e9decf;
+	overflow: hidden;
+	height: 400px
+}
+FTi .loaderH {
+	background-color: transparent;
+	display: block;
+	height: 1px;
+	left: 0;
+	position: absolute;
+	top: 50%;
+	visibility: visible;
+	width: 566px;
+	z-index: 50000;
+}
+#FTi .loaderC {
+	height: 290px;
+	left: 50%;
+	margin-left: -114px;
+	position: absolute;
+	top: 20%;
+	visibility: visible;
+	width: 228px;
+	z-index: 50000;
+}
+#FTi #sourcesCredits {
+	display: none;
+	position: absolute;
+	left: 14px;
+	bottom: 39px;
+	background-color: #f6e9d8;
+	z-index: 5000;
+	border-left: 1px solid #a7a59b;
+	border-right: 1px solid #a7a59b;
+	border-top: 1px solid #a7a59b;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333;
+	line-height: 16px;
+	padding: 10px;
+	margin-right: 14px;/*moz-box-shadow: 1px 1px 4px #000;
+	webkit-box-shadow: 1px 1px 4px #000;
+	box-shadow: 1px 1px 4px #000;*/
+}
+#FTi .footer {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #2e6e9e;
+	height: 22px;
+	left: 0px;
+	background-color: #fff1e0;
+	padding: 8px 0px 0px 10px;
+	border-top: 1px solid #d9cdbe;
+	border-right: 1px solid #e9decf;
+	border-bottom: 8px solid #e9decf;
+	border-left: 1px solid #e9decf;
+}
+#FTi .footer #source {
+	float: left;
+	text-decoration: none;
+	color: #2e6e9e;
+	cursor: pointer;
+	width: 250px;
+}
+#FTi .footer div img {
+	float: right;
+}
+#FTi .footer #sourcesCredits a {
+	text-decoration: none;
+	color: #2e6e9e;
+}
