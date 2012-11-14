@@ -50,11 +50,28 @@ FT.Interactive = FT.Interactive || {
 		return this.browserVersion().browser === 'msie' && this.browserVersion().version <= 8? true : false ;
 	},
 	setPreloader: function(bool){
-		bool ? $('#FTi #preLoader').css('display','inline'): $('#FTi #preLoader').css('display','inline');
+		bool ? $('#FTi #preLoader').css('display','inline'): $('#FTi #preLoader').css('display','none');
 	},
 	displayMessage: function(type){
-		
+		console.log('func:displayMessage');
+		switch(type){
+			case 0: // ie browser and not supported
+				$('#content').load('admin/ifIE.html body');
+				break;
+			case 1: // ie browser and no svg
+				$('#content').load('admin/ifIE_SVG.html body');
+				break;
+			case 2: // ie browser and no CSS3
+				$('#content').load('admin/ifIE_CSS3.html body');
+				break;
+			case 3: // ie browser and no canvas
+				$('#content').load('admin/ifIE_Canvas.html body');
+				break;
+			default:
+				$('#content').load('admin/ifIE_Multiple.html body');
+				break;
+		}
 	}
 }
 
-$('#FTi').delay(2000).fadeIn(500); 
+//$('#FTi').delay(2000).fadeIn(500); 
