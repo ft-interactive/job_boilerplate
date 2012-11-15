@@ -1,0 +1,103 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+<meta charset="utf-8">
+
+<!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/i/378 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Financial Times Interactive Article</title>
+<meta name="description" content="">
+
+<!-- Mobile viewport optimized: h5bp.com/viewport -->
+<meta name="viewport" content="width=device-width">
+
+<!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+
+<!-- We'll assume FT.com hasn't boilerplate -->
+
+<!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+<link rel="stylesheet" type="text/css" href="css/FTi-stage1.css" />
+<link rel="stylesheet" type="text/css" href="css/FTi-stage2.css" />
+</head>
+<body> 
+<header></header>
+<div id="igabcde-012345-098765-fedcba">
+<div id="FTi"> 
+    <!-- custom interactive start -->
+    <div class="narrowWidth">
+        <div class="title"><span>Financial Times Interactive Article</span></div>
+        <!-- set the height class in the following div -->
+        <div class="content"> 
+            
+            <!-- active area start -->
+            <div class="loaderH" id="preLoader">
+                <div class="loaderC"> <img src="http://interactive.ftdata.co.uk/imgs/ftloader.png" width="228" height="256" alt="loading...">
+                    <div id="loadText">
+                        <p>Loading...</p>
+                    </div>
+                </div>
+            </div>
+            <!-- active area end --> 
+            
+        </div>
+        <!-- FTi sandbox end -->
+        <div class="footer">
+            <div id="source">&#x25B2;<a id="sourceLink">Sources and credits</a></div>
+            <div><img src="http://interactive.ftdata.co.uk/imgs/ftlogo.png" alt="ft.com"></div>
+            <div id="sourcesCredits">text here...</div>
+        </div>
+        
+        <!-- custom interactive end --> 
+    </div>
+    <!-- <script type="text/javascript" src="js/_init.js"></script> --> 
+</div>
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script> 
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1874623-62']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> 
+<script type="text/javascript" src="js/_init.js"></script> 
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/qunit/qunit-1.10.0.js"></script>
+<link rel="stylesheet" type="text/css" href="http://code.jquery.com/qunit/qunit-1.10.0.css" />
+<script>
+
+test("browserVersion", function() {
+        equal(FT.Interactive.browserVersion(), { browser: "mozilla", version: "16.0" }, "browser version")
+    });
+
+test("isSupported", function() { 
+	equal(FT.Interactive.isSupported('SVG'), true, "SVG is supported")
+    });
+test("browserTest", function() {
+     equal(FT.Interactive.browserTest(), false, "browser test")  
+    });
+test("setPreloader", function() {
+       
+    });
+test("displayMessage", function() {
+        
+    });
+</script>
+<footer></footer>
+<div id="qunit"></div>
+</body>
+</html>

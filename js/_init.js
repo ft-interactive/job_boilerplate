@@ -53,6 +53,7 @@ FT.Interactive = FT.Interactive || {
 	},
 	setPreloader: function(bool){
 		bool ? $('#FTi #preLoader').css('display','inline'): $('#FTi #preLoader').css('display','none');
+		return bool;
 	},
 	displayMessage: function(type){
 		var m = '';

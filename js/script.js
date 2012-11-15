@@ -9,6 +9,7 @@
 		FT.Interactive.displayMessage(0);
 		
 	} else {
+		
 		var s =[];
 		for (var i=0; i<conf.capability; i++){
 			if(!isSupported(conf.capability[i])){
