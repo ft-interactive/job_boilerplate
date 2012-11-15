@@ -9,8 +9,21 @@
 		FT.Interactive.displayMessage(0);
 		
 	} else {
-		console.log('>>');
-		FT.Interactive.setPreloader(true);
+		var s =[];
+		for (var i=0; i<conf.capability; i++){
+			if(!isSupported(conf.capability[i])){
+				s.push(i);
+			}
+		}
+		if(s.length>0){
+			if(s.length == 1){
+				FT.Interactive.displayMessage(s[0]);
+			} else {
+				FT.Interactive.displayMessage(5);
+			}
+		} else{
+			FT.Interactive.setPreloader(true);
+		}
 	}
 	
 	
